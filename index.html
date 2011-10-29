@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="./common.css" rel="stylesheet" />
+    <title>Gord-o-sketch</title>
+</head>
+
+<body onkeydown="key_press(event.which);">
+    <div id="content">
+        <canvas id="test" width="500" height="500"></canvas>
+        <div id="colors">
+            <fieldset id="controls">
+                <legend>Controls</legend>
+                <label for="colors_select">Select line color</label><br/>
+                <select id="colors_select" onchange="color_pick();">
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>               
+                </select>
+                <div id="move_buttons">
+                    <img id="up" src="./images/up.png" alt="UP" onmousedown="move_up();"/><br/>                  
+                    <img id="left" src="./images/left.png" alt="LEFT" onmousedown="move_left();" />
+                    <img id="right" src="./images/right.png" alt="RIGHT" onmousedown="move_right();"/><br/>
+                    <img id="down" src="./images/down.png" alt="DOWN" onmousedown="move_down();"/>
+                </div>
+                <div id="save_button">
+                    <input type="button" onclick="make_image()" value="Save Sketch" />
+                </div>
+                <div id="shake">
+                    <input type="button" onclick="shake()" value="Shake" />
+                </div>
+                <h3>Instructions</h3>
+                <ol>
+                    <li>Keybard move with Arrow keys or WSAD</li>
+                    <li>Mouse/touch move with buttons, sorry you have to keep clicking</li>
+                    <li>Use the shake button to clear the screen</li>
+                    <li>To save click button then right-click save link as to save</li>
+                </ol>
+            </fieldset>
+        </div>
+    </div>  
+    <script type="text/javascript" src="./common.js"></script>
+</body>
+</html>
